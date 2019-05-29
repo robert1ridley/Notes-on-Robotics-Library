@@ -9,4 +9,4 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本代�
 
 本代码库
 
-![Architecture Overview](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/overview.png?raw=true "Title")
+![Architecture Overview](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/overview-only.png?raw=true "Overview")
