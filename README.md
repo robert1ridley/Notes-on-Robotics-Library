@@ -18,9 +18,11 @@ Library reuse: Well-designed libraries from related fields, such as collision de
 
 In order to have a clear separation of concerns, we implement generic geometric functions that are independent from a robot’s kinematic or dynamic model in the mathematics component, which is kept free from any software dependencies.
 
-![Math Functions](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/math_functions_class_hierarchy.png?raw=True "Functions")
+![Math Functions](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/math_functions_class_hierarchy.png?raw=True "Functions")	
 
 ### Hardware Abstraction Layer
+
+Hardware devices lend themselves well for an object-oriented, hierarchical implementation. While devices of similar types, such as actuators, force-torque sensors, grippers, or cameras, share a common set of basic features, individual devices may provide additional features specific to a certain manufacturer. These common interfaces are organized as a class hierarchy in an object-oriented hardware abstraction layer as shown below.
 
 ![Hardware Abstraction Layer](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/hardware_abstraction_classes.png?raw=True "Hardware")
 
