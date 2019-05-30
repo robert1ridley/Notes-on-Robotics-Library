@@ -3,7 +3,7 @@
 ## Robotics Library 的简介
 
 Robotics Library是一个面向对象的机器人工程学解决方案，本框架是用C++写的。代码在Github上，在这个链接可以看到：https://github.com/roboticslibrary/rl ，目前版本为0.7。
-它的范围包括数学、运动学和动力学、硬件抽象、运动规划、碰撞检测和可视化。网上也有关于本项目设计的论文：https://www.roboticslibrary.org/Rickert2017a.pdf 。
+它的范围包括数学、运动学和动力学、硬件抽象、运动规划、碰撞检测和可视化。网上也有关于本框架设计的论文：https://www.roboticslibrary.org/Rickert2017a.pdf 。
 
 ## 体系结构
 
@@ -18,8 +18,8 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 
 ### 自己对Robotics Library体系结构的分析：
 
-* Robotics Library 使用层次的结构（Layered Architecture)：
-	- 在最底层有一个数学库，该库包括一些高性能的矩阵和向量操作，这些操作都在上一层的算法（比如运动学、动力学、路径图计划等算法）广泛使用。
+我感觉Robotics Library 使用层次的结构（Layered Architecture)。
+- 在最底层有一个数学库，该库包括一些高性能的矩阵和向量操作，这些操作都在上一层的算法（比如运动学、动力学、路径图计划等算法）广泛使用。
 
 图1.2（math里的Matrix.h文件）:
 ![Matrix](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/matrix.png?raw=true "Matrix")
@@ -27,4 +27,7 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 图1.3（mdl里的Kinematic.h文件）:
 ![Kinematic](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/kinematic.png?raw=true "Kinematic")
 
+	- 图1.2是本代码库最底层的Matrix实施，它利用一个开源的线性代数代码库叫Eigen，图1.3是math上一层的一个文件叫Kinematic，在这个文件里有一些算Jacobian的函数，这些函数利用下一层提供的Matrix API。
+	- 我觉得体系结构不是严格的层次结构，因为某层提供的接口可能被该层以上不同的层利用，比如说路径图计划层在Kinematics的上一层，但是它还利用一些math提供的接口。
 
+图1.4（
