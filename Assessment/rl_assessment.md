@@ -7,8 +7,7 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 
 ## 体系结构
 
-本代码库的基本结构：
-
+图1.1（本代码库的基本结构：
 ![Architecture Overview](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/overview-only.png?raw=true "Overview")
 
 作者强调了四个关于本框架的体系结构的重点：
@@ -22,7 +21,7 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 * Robotics Library 使用层次的结构（Layered Architecture)：
 	- 在最底层有一个数学库，该库包括一些高性能的矩阵和向量操作，这些操作都在上一层的算法（比如运动学、动力学、路径图计划等算法）广泛使用。
 
-图1.1（math里的Matrix.h文件）:
+图1.2（math里的Matrix.h文件）:
 ![Matrix](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/matrix.png?raw=true "Matrix")
 
 
