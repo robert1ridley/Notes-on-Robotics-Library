@@ -27,7 +27,10 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 图1.3（mdl里的Kinematic.h文件）:
 ![Kinematic](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/kinematic.png?raw=true "Kinematic")
 
-- 图1.2是本代码库最底层的Matrix实施，它利用一个开源的线性代数代码库叫Eigen，图1.3是math上一层的一个文件叫Kinematic，在这个文件里有一些算Jacobian的函数，这些函数利用下一层提供的Matrix API。
-- 我觉得体系结构不是严格的层次结构，因为某层提供的接口可能被该层以上不同的层利用，比如说路径图计划层在Kinematics的上一层，但是它还利用一些math提供的接口。
+- 图1.2是本代码库最底层的Matrix实施，它利用一个开源的线性代数代码库叫Eigen，图1.3是math上一层的一个文件叫Kinematic，在这个文件里有一些算Jacobian的函数，这些函数利用下一层提供的Matrix 接口。
+- 我觉得体系结构不是严格的层次结构，因为某层提供的接口可能被该层以上不同的层利用，比如路径图计划层在于Kinematics的上一层，但是它还利用一些math层提供的接口，因此我感觉本框架也有一些component-based 体系结构的特点（即每个component容易复用，且没有严格的层次约束，看图1.4）。
 
-图1.4（
+图1.4（Layered和Component-based体系结构）：
+(TODO: ADD IMAGE OF LAYERED/COMPONENT-BASED HERE)
+
+
