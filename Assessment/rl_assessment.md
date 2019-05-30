@@ -34,3 +34,8 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 (TODO: ADD IMAGE OF LAYERED/COMPONENT-BASED HERE)
 
 
+### Robotics Library 利用的设计模式：
+
+Robotics Library是用C++写的，它利用一些面向对象的设计模式：
+- Composite Pattern：
+- Factory Pattern：
