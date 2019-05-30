@@ -24,4 +24,7 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 图1.2（math里的Matrix.h文件）:
 ![Matrix](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/matrix.png?raw=true "Matrix")
 
+图1.3（mdl里的Kinematic.h文件）:
+![Kinematic](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/kinematic.png?raw=true "Kinematic")
+
 
