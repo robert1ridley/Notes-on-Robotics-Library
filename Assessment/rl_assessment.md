@@ -18,7 +18,7 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 
 ### 自己对Robotics Library体系结构的分析：
 
-我感觉Robotics Library 使用层次的结构（Layered Architecture)。
+我感觉Robotics Library 使用层次的体系结构（Layered Architecture)。
 - 在最底层有一个数学库，该库包括一些高性能的矩阵和向量操作，这些操作都在上一层的算法（比如运动学、动力学、路径图计划等算法）广泛使用。
 
 图1.2（math里的Matrix.h文件）:
