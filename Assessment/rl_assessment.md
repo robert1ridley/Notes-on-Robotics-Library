@@ -37,8 +37,8 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 ### Robotics Library 利用的设计模式：
 
 Robotics Library是用C++写的，在代码里，一个常见的设计模式是Factory模式：
-- 在'sg'目录里有一个文件叫'XmlFactory.cpp'，它有一个函数叫'load'，但是因为利用Factory设计模式，这个函数更有灵活性（图1.5）。
+- 在'sg'目录里有一个文件叫`XmlFactory.cpp`，它有一个函数叫'load'，但是因为利用Factory设计模式，这个函数更有灵活性（图1.5）。
 
 ![Factory Approach](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/factory.png?raw=true "Factory")
 
-- 图1.5里的'XmlFactory::load'函数有两个实施，这个是Factory设计模式的一个特点，第一个函数
+- 图1.5里的`XmlFactory::load`函数有两个实施方法，这是Factory设计模式的一个特点，第一个函数只接受两个参数`filename`和`scene`，如果用户只提供这两个参数，函数就直接load XML文件。不过`XmlFactory::load`函数的第二个实施方法还接受`doBoundingBoxPoints`和`doPoints`两个参数，要是用户提供这两个参数，该实施方法将执行。
