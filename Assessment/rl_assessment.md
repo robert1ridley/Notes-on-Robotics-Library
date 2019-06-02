@@ -31,7 +31,7 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 - 我觉得体系结构不是严格的层次结构，因为某层提供的接口可能被该层以上不同的层利用，比如路径图计划层在于Kinematics的上一层，但是它还利用一些math层提供的接口，因此我感觉本框架也有一些component-based 体系结构的特点（即每个component容易复用，且没有严格的层次约束，看图1.4）。
 
 图1.4（Layered和Component-based体系结构）：
-(TODO: ADD IMAGE OF LAYERED/COMPONENT-BASED HERE)
+![Layered Components](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/layered-component.png?raw=true "LayeredComp")
 
 
 ### Robotics Library 利用的设计模式：
