@@ -27,7 +27,7 @@ Robotics Library是一个面向对象的机器人工程学解决方案，本框�
 图1.3（mdl里的Kinematic.h文件）:
 ![Kinematic](https://raw.githubusercontent.com/robert1ridley/Notes-on-Robotics-Library/master/resources/kinematic.png?raw=true "Kinematic")
 
-- 图1.2是本代码库最底层的Matrix实施，它利用一个开源的线性代数代码库叫Eigen，图1.3是math上一层的一个文件叫Kinematic，在这个文件里有一些算Jacobian的函数，这些函数利用下一层提供的Matrix 接口。
+- 图1.2是本代码库最底层的Matrix实施，它利用一个开源的线性代数代码库叫Eigen，图1.3是math上一层的一个文件叫Kinematic，在这个文件里有一些计算Jacobian的函数，这些函数利用下一层提供的Matrix 接口。
 - 我觉得体系结构不是严格的层次结构，因为某层提供的接口可能被该层以上不同的层利用，比如路径图计划层在于Kinematics的上一层，但是它还利用一些math层提供的接口，因此我感觉本框架也有一些component-based 体系结构的特点（即每个component容易复用，且没有严格的层次约束，看图1.4）。
 
 图1.4（Layered和Component-based体系结构）：
@@ -47,4 +47,4 @@ Robotics Library是用C++写的，在代码里，一个常见的设计模式是F
 
 ### Robotics Library 的软件体系结构总结：
 
-我认为Robotics Library的许多体系结构决策都是基于灵活性的。对于创建者来说，有必要在不影响现有功能的情况下添加新功能。例如，他们可能希望添加计算机视觉组件。这需要在不影响其他现有组件的情况下添加。我相信正是这种需求导致了选择基于组件的分层体系结构。这使得添加新的组件不需要太多麻烦。使用一些简单的设计模式（如工厂模式）的选择允许在编码功能和使用库方面具有更大的灵活性。
+我认为Robotics Library的许多体系结构决策都是基于灵活性的。对于开发者来说，有必要在不影响现有功能的情况下添加新功能。例如，他们可能希望添加计算机视觉组件。这需要在不影响其他现有组件的情况下添加。我相信正是这种需求导致了选择基于组件的分层体系结构。这使得添加新的组件不需要太多麻烦。使用一些简单的设计模式（如工厂模式）的选择允许在编码功能和使用库方面具有更大的灵活性。
